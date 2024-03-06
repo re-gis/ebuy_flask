@@ -1,0 +1,16 @@
+template
+# Ignore compiled Python files
+*.pyc
+
+# Ignore virtual environment directories
+venv/
+.env/
+
+# Ignore database files
+*.db
+
+# Ignore log files
+*.log
+
+# Ignore macOS system files
+.DS_Store
