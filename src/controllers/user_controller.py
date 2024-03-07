@@ -1,5 +1,5 @@
 from flask import request, Response, Blueprint, json
-from src.models.user_model import Users
+from src.models.models import Users
 from flask_bcrypt import bcrypt, Bcrypt
 from datetime import datetime
 from jwt import PyJWT

@@ -1,0 +1,831 @@
+[
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "sqlalchemy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "fileConfig",
+        "importPath": "logging.config",
+        "description": "logging.config",
+        "isExtraImport": true,
+        "detail": "logging.config",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "token_required",
+        "importPath": "src.middlewares.protected_middleware",
+        "description": "src.middlewares.protected_middleware",
+        "isExtraImport": true,
+        "detail": "src.middlewares.protected_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "Users",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "isExtraImport": true,
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "bcrypt",
+        "importPath": "flask_bcrypt",
+        "description": "flask_bcrypt",
+        "isExtraImport": true,
+        "detail": "flask_bcrypt",
+        "documentation": {}
+    },
+    {
+        "label": "Bcrypt",
+        "importPath": "flask_bcrypt",
+        "description": "flask_bcrypt",
+        "isExtraImport": true,
+        "detail": "flask_bcrypt",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "PyJWT",
+        "importPath": "jwt",
+        "description": "jwt",
+        "isExtraImport": true,
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "src",
+        "description": "src",
+        "isExtraImport": true,
+        "detail": "src",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "src",
+        "description": "src",
+        "isExtraImport": true,
+        "detail": "src",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "src",
+        "description": "src",
+        "isExtraImport": true,
+        "detail": "src",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "src",
+        "description": "src",
+        "isExtraImport": true,
+        "detail": "src",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "users",
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "products",
+        "importPath": "src.controllers.product_controller",
+        "description": "src.controllers.product_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "description": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=100), nullable=False),\n    sa.Column('email', sa.String(length=120), nullable=False),\n    sa.Column('password', sa.String(length=128), nullable=False),\n    sa.PrimaryKeyConstraint('id'),\n    sa.UniqueConstraint('email'),\n    sa.UniqueConstraint('username')",
+        "detail": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "description": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('users')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "revision",
+        "kind": 5,
+        "importPath": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "description": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "peekOfCode": "revision = '46144111a1d4'\ndown_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=100), nullable=False),\n    sa.Column('email', sa.String(length=120), nullable=False),",
+        "detail": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "down_revision",
+        "kind": 5,
+        "importPath": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "description": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "peekOfCode": "down_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=100), nullable=False),\n    sa.Column('email', sa.String(length=120), nullable=False),\n    sa.Column('password', sa.String(length=128), nullable=False),",
+        "detail": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "branch_labels",
+        "kind": 5,
+        "importPath": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "description": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=100), nullable=False),\n    sa.Column('email', sa.String(length=120), nullable=False),\n    sa.Column('password', sa.String(length=128), nullable=False),\n    sa.PrimaryKeyConstraint('id'),",
+        "detail": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "depends_on",
+        "kind": 5,
+        "importPath": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "description": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=100), nullable=False),\n    sa.Column('email', sa.String(length=120), nullable=False),\n    sa.Column('password', sa.String(length=128), nullable=False),\n    sa.PrimaryKeyConstraint('id'),\n    sa.UniqueConstraint('email'),",
+        "detail": "migrations.versions.46144111a1d4_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.7d686d65e26d_adding_product_model",
+        "description": "migrations.versions.7d686d65e26d_adding_product_model",
+        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('products',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name', sa.String(length=100), nullable=False),\n    sa.Column('stock', sa.Integer(), nullable=True),\n    sa.Column('image_url', sa.String(length=200), nullable=False),\n    sa.Column('description', sa.String(length=200), nullable=False),\n    sa.Column('price', sa.Float(), nullable=False),\n    sa.Column('date_added', sa.DateTime(), nullable=True),",
+        "detail": "migrations.versions.7d686d65e26d_adding_product_model",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.7d686d65e26d_adding_product_model",
+        "description": "migrations.versions.7d686d65e26d_adding_product_model",
+        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('products')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.7d686d65e26d_adding_product_model",
+        "documentation": {}
+    },
+    {
+        "label": "revision",
+        "kind": 5,
+        "importPath": "migrations.versions.7d686d65e26d_adding_product_model",
+        "description": "migrations.versions.7d686d65e26d_adding_product_model",
+        "peekOfCode": "revision = '7d686d65e26d'\ndown_revision = 'c216d98115a0'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('products',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name', sa.String(length=100), nullable=False),\n    sa.Column('stock', sa.Integer(), nullable=True),",
+        "detail": "migrations.versions.7d686d65e26d_adding_product_model",
+        "documentation": {}
+    },
+    {
+        "label": "down_revision",
+        "kind": 5,
+        "importPath": "migrations.versions.7d686d65e26d_adding_product_model",
+        "description": "migrations.versions.7d686d65e26d_adding_product_model",
+        "peekOfCode": "down_revision = 'c216d98115a0'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('products',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name', sa.String(length=100), nullable=False),\n    sa.Column('stock', sa.Integer(), nullable=True),\n    sa.Column('image_url', sa.String(length=200), nullable=False),",
+        "detail": "migrations.versions.7d686d65e26d_adding_product_model",
+        "documentation": {}
+    },
+    {
+        "label": "branch_labels",
+        "kind": 5,
+        "importPath": "migrations.versions.7d686d65e26d_adding_product_model",
+        "description": "migrations.versions.7d686d65e26d_adding_product_model",
+        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('products',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name', sa.String(length=100), nullable=False),\n    sa.Column('stock', sa.Integer(), nullable=True),\n    sa.Column('image_url', sa.String(length=200), nullable=False),\n    sa.Column('description', sa.String(length=200), nullable=False),",
+        "detail": "migrations.versions.7d686d65e26d_adding_product_model",
+        "documentation": {}
+    },
+    {
+        "label": "depends_on",
+        "kind": 5,
+        "importPath": "migrations.versions.7d686d65e26d_adding_product_model",
+        "description": "migrations.versions.7d686d65e26d_adding_product_model",
+        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('products',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name', sa.String(length=100), nullable=False),\n    sa.Column('stock', sa.Integer(), nullable=True),\n    sa.Column('image_url', sa.String(length=200), nullable=False),\n    sa.Column('description', sa.String(length=200), nullable=False),\n    sa.Column('price', sa.Float(), nullable=False),",
+        "detail": "migrations.versions.7d686d65e26d_adding_product_model",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "description": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.add_column(sa.Column('role', sa.String(length=20), nullable=False))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.drop_column('role')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "description": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.drop_column('role')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "revision",
+        "kind": 5,
+        "importPath": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "description": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "peekOfCode": "revision = '9f386eebd3e1'\ndown_revision = '46144111a1d4'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.add_column(sa.Column('role', sa.String(length=20), nullable=False))\n    # ### end Alembic commands ###\ndef downgrade():",
+        "detail": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "down_revision",
+        "kind": 5,
+        "importPath": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "description": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "peekOfCode": "down_revision = '46144111a1d4'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.add_column(sa.Column('role', sa.String(length=20), nullable=False))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###",
+        "detail": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "branch_labels",
+        "kind": 5,
+        "importPath": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "description": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.add_column(sa.Column('role', sa.String(length=20), nullable=False))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:",
+        "detail": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "depends_on",
+        "kind": 5,
+        "importPath": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "description": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.add_column(sa.Column('role', sa.String(length=20), nullable=False))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.drop_column('role')",
+        "detail": "migrations.versions.9f386eebd3e1_description_of_the_migration",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.alter_column('role',\n               existing_type=sa.VARCHAR(length=20),\n               nullable=True)\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:",
+        "detail": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.alter_column('role',\n               existing_type=sa.VARCHAR(length=20),\n               nullable=False)\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "revision",
+        "kind": 5,
+        "importPath": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "revision = 'b197783e5457'\ndown_revision = '9f386eebd3e1'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.alter_column('role',\n               existing_type=sa.VARCHAR(length=20),\n               nullable=True)",
+        "detail": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "down_revision",
+        "kind": 5,
+        "importPath": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "down_revision = '9f386eebd3e1'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.alter_column('role',\n               existing_type=sa.VARCHAR(length=20),\n               nullable=True)\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "branch_labels",
+        "kind": 5,
+        "importPath": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.alter_column('role',\n               existing_type=sa.VARCHAR(length=20),\n               nullable=True)\n    # ### end Alembic commands ###\ndef downgrade():",
+        "detail": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "depends_on",
+        "kind": 5,
+        "importPath": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('users', schema=None) as batch_op:\n        batch_op.alter_column('role',\n               existing_type=sa.VARCHAR(length=20),\n               nullable=True)\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###",
+        "detail": "migrations.versions.b197783e5457_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('carts',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('owner_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['owner_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n    )\n    op.create_table('cart_items',\n    sa.Column('id', sa.Integer(), nullable=False),",
+        "detail": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('cart_items')\n    op.drop_table('carts')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "revision",
+        "kind": 5,
+        "importPath": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "revision = 'c216d98115a0'\ndown_revision = 'b197783e5457'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('carts',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('owner_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['owner_id'], ['users.id'], ),",
+        "detail": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "down_revision",
+        "kind": 5,
+        "importPath": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "down_revision = 'b197783e5457'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('carts',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('owner_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['owner_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')",
+        "detail": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "branch_labels",
+        "kind": 5,
+        "importPath": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('carts',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('owner_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['owner_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n    )",
+        "detail": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "depends_on",
+        "kind": 5,
+        "importPath": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "description": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('carts',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('owner_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['owner_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n    )\n    op.create_table('cart_items',",
+        "detail": "migrations.versions.c216d98115a0_adding_the_cart_and_cartitems_models",
+        "documentation": {}
+    },
+    {
+        "label": "get_engine",
+        "kind": 2,
+        "importPath": "migrations.env",
+        "description": "migrations.env",
+        "peekOfCode": "def get_engine():\n    try:\n        # this works with Flask-SQLAlchemy<3 and Alchemical\n        return current_app.extensions['migrate'].db.get_engine()\n    except (TypeError, AttributeError):\n        # this works with Flask-SQLAlchemy>=3\n        return current_app.extensions['migrate'].db.engine\ndef get_engine_url():\n    try:\n        return get_engine().url.render_as_string(hide_password=False).replace(",
+        "detail": "migrations.env",
+        "documentation": {}
+    },
+    {
+        "label": "get_engine_url",
+        "kind": 2,
+        "importPath": "migrations.env",
+        "description": "migrations.env",
+        "peekOfCode": "def get_engine_url():\n    try:\n        return get_engine().url.render_as_string(hide_password=False).replace(\n            '%', '%%')\n    except AttributeError:\n        return str(get_engine().url).replace('%', '%%')\n# add your model's MetaData object here\n# for 'autogenerate' support\n# from myapp import mymodel\n# target_metadata = mymodel.Base.metadata",
+        "detail": "migrations.env",
+        "documentation": {}
+    },
+    {
+        "label": "get_metadata",
+        "kind": 2,
+        "importPath": "migrations.env",
+        "description": "migrations.env",
+        "peekOfCode": "def get_metadata():\n    if hasattr(target_db, 'metadatas'):\n        return target_db.metadatas[None]\n    return target_db.metadata\ndef run_migrations_offline():\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation\n    we don't even need a DBAPI to be available.",
+        "detail": "migrations.env",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_offline",
+        "kind": 2,
+        "importPath": "migrations.env",
+        "description": "migrations.env",
+        "peekOfCode": "def run_migrations_offline():\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation\n    we don't even need a DBAPI to be available.\n    Calls to context.execute() here emit the given string to the\n    script output.\n    \"\"\"\n    url = config.get_main_option(\"sqlalchemy.url\")",
+        "detail": "migrations.env",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_online",
+        "kind": 2,
+        "importPath": "migrations.env",
+        "description": "migrations.env",
+        "peekOfCode": "def run_migrations_online():\n    \"\"\"Run migrations in 'online' mode.\n    In this scenario we need to create an Engine\n    and associate a connection with the context.\n    \"\"\"\n    # this callback is used to prevent an auto-migration from being generated\n    # when there are no changes to the schema\n    # reference: http://alembic.zzzcomputing.com/en/latest/cookbook.html\n    def process_revision_directives(context, revision, directives):\n        if getattr(config.cmd_opts, 'autogenerate', False):",
+        "detail": "migrations.env",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 5,
+        "importPath": "migrations.env",
+        "description": "migrations.env",
+        "peekOfCode": "config = context.config\n# Interpret the config file for Python logging.\n# This line sets up loggers basically.\nfileConfig(config.config_file_name)\nlogger = logging.getLogger('alembic.env')\ndef get_engine():\n    try:\n        # this works with Flask-SQLAlchemy<3 and Alchemical\n        return current_app.extensions['migrate'].db.get_engine()\n    except (TypeError, AttributeError):",
+        "detail": "migrations.env",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "migrations.env",
+        "description": "migrations.env",
+        "peekOfCode": "logger = logging.getLogger('alembic.env')\ndef get_engine():\n    try:\n        # this works with Flask-SQLAlchemy<3 and Alchemical\n        return current_app.extensions['migrate'].db.get_engine()\n    except (TypeError, AttributeError):\n        # this works with Flask-SQLAlchemy>=3\n        return current_app.extensions['migrate'].db.engine\ndef get_engine_url():\n    try:",
+        "detail": "migrations.env",
+        "documentation": {}
+    },
+    {
+        "label": "target_db",
+        "kind": 5,
+        "importPath": "migrations.env",
+        "description": "migrations.env",
+        "peekOfCode": "target_db = current_app.extensions['migrate'].db\n# other values from the config, defined by the needs of env.py,\n# can be acquired:\n# my_important_option = config.get_main_option(\"my_important_option\")\n# ... etc.\ndef get_metadata():\n    if hasattr(target_db, 'metadatas'):\n        return target_db.metadatas[None]\n    return target_db.metadata\ndef run_migrations_offline():",
+        "detail": "migrations.env",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "kind": 6,
+        "importPath": "src.config.config",
+        "description": "src.config.config",
+        "peekOfCode": "class Config:\n    def __init__(self):\n        self.dev_config = DevConfig\n        self.production_config = ProductionConfig",
+        "detail": "src.config.config",
+        "documentation": {}
+    },
+    {
+        "label": "DevConfig",
+        "kind": 6,
+        "importPath": "src.config.dev_config",
+        "description": "src.config.dev_config",
+        "peekOfCode": "class DevConfig:\n    ENV = \"development\"\n    DEBUG = True\n    PORT = 3000\n    HOST = \"127.0.0.1\"",
+        "detail": "src.config.dev_config",
+        "documentation": {}
+    },
+    {
+        "label": "ProductionConfig",
+        "kind": 6,
+        "importPath": "src.config.production",
+        "description": "src.config.production",
+        "peekOfCode": "class ProductionConfig:\n    ENV = \"production\"\n    DEBUG = False\n    PORT = 80\n    HOST = \"0.0.0.0\"",
+        "detail": "src.config.production",
+        "documentation": {}
+    },
+    {
+        "label": "addProduct",
+        "kind": 2,
+        "importPath": "src.controllers.product_controller",
+        "description": "src.controllers.product_controller",
+        "peekOfCode": "def addProduct(user):\n    print(user)",
+        "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
+        "label": "products",
+        "kind": 5,
+        "importPath": "src.controllers.product_controller",
+        "description": "src.controllers.product_controller",
+        "peekOfCode": "products = Blueprint(\"products\", __name__)\n@products.route(\"/add\", methods=[\"POST\"])\n@token_required\ndef addProduct(user):\n    print(user)",
+        "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
+        "label": "registerUser",
+        "kind": 2,
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "peekOfCode": "def registerUser():\n    try:\n        data = request.json\n        if \"email\" and \"password\" and \"username\" in data:\n            user = Users.query.filter_by(email=data[\"email\"]).first()\n            role = \"CLIENT\"\n            if \"role\" in data:\n                if data[\"role\"] == \"SELLER\":\n                    role = \"SELLER\"\n                else:",
+        "detail": "src.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "peekOfCode": "def login():\n    try:\n        # first check user parameters\n        data = request.json\n        if \"email\" and \"password\" in data:\n            # check db for user records\n            user = Users.query.filter_by(email=data[\"email\"]).first()\n            # if user records exists we will check user password\n            if user:\n                # check user password",
+        "detail": "src.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "peekOfCode": "def update(id):\n    try:\n        user = Users.query.get(id)\n        if not user:\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"Not Found!\",\n                        \"message\": \"User not found!\",\n                    }",
+        "detail": "src.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "getUsers",
+        "kind": 2,
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "peekOfCode": "def getUsers():\n    try:\n        users = Users.query.all()\n        u_list = []\n        for user in users:\n            user_data = {\"id\": user.id, \"username\": user.username, \"email\": user.email}\n            u_list.append(user_data)\n        return Response(\n            response=json.dumps({\"status\": \"OK\", \"users\": u_list}),\n            status=200,",
+        "detail": "src.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "delete",
+        "kind": 2,
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "peekOfCode": "def delete(id):\n    try:\n        # get the user\n        user = Users.query.get(id=id)\n        if not user:\n            return Response(\n                response=json.dumps(\n                    {\"status\": \"Not found!\", \"message\": \"User not found!\"}\n                ),\n                status=404,",
+        "detail": "src.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "users",
+        "kind": 5,
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "peekOfCode": "users = Blueprint(\"users\", __name__)\nbcrypt = Bcrypt()\njwt = PyJWT()\n@users.route(\"/register\", methods=[\"POST\", \"GET\"])\ndef registerUser():\n    try:\n        data = request.json\n        if \"email\" and \"password\" and \"username\" in data:\n            user = Users.query.filter_by(email=data[\"email\"]).first()\n            role = \"CLIENT\"",
+        "detail": "src.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "bcrypt",
+        "kind": 5,
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "peekOfCode": "bcrypt = Bcrypt()\njwt = PyJWT()\n@users.route(\"/register\", methods=[\"POST\", \"GET\"])\ndef registerUser():\n    try:\n        data = request.json\n        if \"email\" and \"password\" and \"username\" in data:\n            user = Users.query.filter_by(email=data[\"email\"]).first()\n            role = \"CLIENT\"\n            if \"role\" in data:",
+        "detail": "src.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 5,
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "peekOfCode": "jwt = PyJWT()\n@users.route(\"/register\", methods=[\"POST\", \"GET\"])\ndef registerUser():\n    try:\n        data = request.json\n        if \"email\" and \"password\" and \"username\" in data:\n            user = Users.query.filter_by(email=data[\"email\"]).first()\n            role = \"CLIENT\"\n            if \"role\" in data:\n                if data[\"role\"] == \"SELLER\":",
+        "detail": "src.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "token_required",
+        "kind": 2,
+        "importPath": "src.middlewares.protected_middleware",
+        "description": "src.middlewares.protected_middleware",
+        "peekOfCode": "def token_required(f):\n    @wraps(f)\n    def decorated_function(*args, **kwargs):\n        token = None\n        # Check if 'Authorization' header is present in the request\n        if \"Authorization\" in request.headers:\n            token = request.headers[\"Authorization\"].split()[1]  # Get token from header\n        if not token:\n            return jsonify({\"error\": \"Token is missing\"}), 401\n        try:",
+        "detail": "src.middlewares.protected_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "Users",
+        "kind": 6,
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "peekOfCode": "class Users(db.Model):\n    __tablename__ = \"users\"\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(100), unique=True, nullable=False)\n    email = db.Column(db.String(120), unique=True, nullable=False)\n    password = db.Column(db.String(128), nullable=False)\n    role = db.Column(db.String(20), nullable=True)\n    def __str__(self):\n        return self.email\nclass Product(db.Model):",
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "kind": 6,
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "peekOfCode": "class Product(db.Model):\n    __tablename__ = \"products\"\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), unique=False, nullable=False)\n    stock = db.Column(db.Integer)\n    image_url = db.Column(db.String(200), nullable=False)\n    description = db.Column(db.String(200), nullable=False)\n    price = db.Column(db.Float, nullable=False)\n    date_added = db.Column(db.DateTime, default=datetime.utcnow)\nclass Carts(db.Model):",
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Carts",
+        "kind": 6,
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "peekOfCode": "class Carts(db.Model):\n    __tablename__ = \"carts\"\n    id = db.Column(db.Integer, primary_key=True)\n    owner_id = db.Column(db.Integer, db.ForeignKey(\"users.id\"))\n    owner = db.relationship(\"Users\", backref=\"carts\", lazy=True)\n    cart_items = db.relationship(\"CartItems\", backref=\"cart\", lazy=\"dynamic\")\nclass CartItems(db.Model):\n    __tablename__ = \"cart_items\"\n    id = db.Column(db.Integer, primary_key=True)\n    product_name = db.Column(db.String(100), nullable=False)",
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "CartItems",
+        "kind": 6,
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "peekOfCode": "class CartItems(db.Model):\n    __tablename__ = \"cart_items\"\n    id = db.Column(db.Integer, primary_key=True)\n    product_name = db.Column(db.String(100), nullable=False)\n    quantity = db.Column(db.Integer, nullable=False)\n    cart_id = db.Column(db.Integer, db.ForeignKey(\"carts.id\"))",
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "api",
+        "kind": 5,
+        "importPath": "src.routes",
+        "description": "src.routes",
+        "peekOfCode": "api = Blueprint(\"api\", __name__)\napi.register_blueprint(users, url_prefix=\"/users\")\napi.register_blueprint(products, url_prefix=\"/products\")",
+        "detail": "src.routes",
+        "documentation": {}
+    }
+]

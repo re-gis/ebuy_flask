@@ -22,4 +22,4 @@ migrate = Migrate(app=app, db=db)
 from src.routes import api
 
 app.register_blueprint(api, url_prefix="/api")
-from src.models.user_model import Users
+from src.models.models import Users
