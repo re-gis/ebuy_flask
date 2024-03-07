@@ -70,14 +70,14 @@ def addProduct(user):
                 date_added=datetime.utcnow(),
                 image_url=img_object,
             )
-            
+
             product_dict = {
-                "name":product.name,
+                "name": product.name,
                 "description": product.description,
-                "stock":product.stock,
-                "price":product.price,
-                "image":product.image_url,
-                "date_added":product.date_added
+                "stock": product.stock,
+                "price": product.price,
+                "image": product.image_url,
+                "date_added": product.date_added,
             }
 
             db.session.add(product)
@@ -105,6 +105,192 @@ def addProduct(user):
                 mimetype="application/json",
             )
 
+    except Exception as e:
+        print(e)
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "failed",
+                    "message": "Internal server error...",
+                    "error": str(e),
+                }
+            ),
+            status=500,
+            mimetype="application/json",
+        )
+
+
+@products.route("/", methods=["GET"])
+@token_required
+def getProducts(user):
+    try:
+        products = Product.query.all()
+
+        p_list = []
+
+        for product in products:
+            product_data = {
+                "id": product.id,
+                "name": product.name,
+                "description": product.description,
+                "price": product.price,
+                "stock": product.stock,
+                "image": product.image_url,
+                "date added": product.date_added,
+            }
+            p_list.append(product_data)
+
+        if len(p_list) == 0:
+            return Response(
+                response=json.dumps({"status": "OK", "message": "No products found!"}),
+                status=200,
+                mimetype="application/json",
+            )
+        return Response(
+            response=json.dumps({"status": "success", "products": p_list}),
+            status=200,
+            mimetype="application/json",
+        )
+    except Exception as e:
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "failed",
+                    "message": "Internal server error...",
+                    "error": str(e),
+                }
+            ),
+            status=500,
+            mimetype="application/json",
+        )
+
+
+@products.route("/<int:id>", methods=["GET"])
+def getProductById(id):
+    try:
+        # getting the product by id
+        product = Product.query.get(id)
+        if not product:
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "not found",
+                        "message": "Product not found!",
+                    }
+                ),
+                status=404,
+                mimetype="application/json",
+            )
+
+        product_data = {
+            "id": product.id,
+            "name": product.name,
+            "description": product.description,
+            "price": product.price,
+            "stock": product.stock,
+            "image": product.image_url,
+            "date added": product.date_added,
+        }
+
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "success",
+                    "product": product_data,
+                }
+            ),
+            status=200,
+            mimetype="application/json",
+        )
+    except Exception as e:
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "failed",
+                    "message": "Internal server error...",
+                    "error": str(e),
+                }
+            ),
+            status=500,
+            mimetype="application/json",
+        )
+
+
+@products.route("/update/<int:id>", methods=["PUT"])
+@token_required
+def updateProduct(user, id):
+    try:
+        # first check the user's role
+        if user["role"] not in ["SELLER", "ADMIN"]:
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "Not authorised",
+                        "message": "You are not authorised to perform this action!",
+                    }
+                ),
+                status=403,
+                mimetype="application/json",
+            )
+        # get the product
+        product = Product.query.get(id)
+        if not product:
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "not found",
+                        "message": "Product not found!",
+                    }
+                ),
+                status=404,
+                mimetype="application/json",
+            )
+        data = request.form
+        print(data['name'])
+        print(data)
+        print(request.form['name'])
+        print("name" in data)
+        # update the product
+        if "name" in data:
+            product.name = data["name"]
+        if "description" in data:
+            product.description = data["description"]
+        if "price" in data:
+            product.price = data["price"]
+        if "quantity" in data:
+            product.stock = data["quantity"]
+
+        if "image" in request.files:
+            uploaded_file = request.files["image"]
+            if uploaded_file.filename != "":
+                # If an image file is present, upload it
+                img_object = upload_image(uploaded_file)
+                product.image_url = img_object["url"]
+
+        # Save the updated product
+        db.session.commit()
+
+        product_data = {
+            "id": product.id,
+            "name": product.name,
+            "description": product.description,
+            "price": product.price,
+            "stock": product.stock,
+            "image": product.image_url,
+            "date added": product.date_added,
+        }
+
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "success",
+                    "message": "Product updated successfully...",
+                    "product": product_data,
+                }
+            ),
+            status=201,
+            mimetype="application/json",
+        )
     except Exception as e:
         print(e)
         return Response(

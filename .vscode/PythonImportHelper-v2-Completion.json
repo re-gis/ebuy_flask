@@ -759,6 +759,33 @@
         "documentation": {}
     },
     {
+        "label": "getProducts",
+        "kind": 2,
+        "importPath": "src.controllers.product_controller",
+        "description": "src.controllers.product_controller",
+        "peekOfCode": "def getProducts(user):\n    try:\n        products = Product.query.all()\n        p_list = []\n        for product in products:\n            product_data = {\n                \"id\": product.id,\n                \"name\": product.name,\n                \"description\": product.description,\n                \"price\": product.price,",
+        "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
+        "label": "getProductById",
+        "kind": 2,
+        "importPath": "src.controllers.product_controller",
+        "description": "src.controllers.product_controller",
+        "peekOfCode": "def getProductById(id):\n    try:\n        # getting the product by id\n        product = Product.query.get(id)\n        if not product:\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"not found\",\n                        \"message\": \"Product not found!\",",
+        "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
+        "label": "updateProduct",
+        "kind": 2,
+        "importPath": "src.controllers.product_controller",
+        "description": "src.controllers.product_controller",
+        "peekOfCode": "def updateProduct(user, id):\n    try:\n        # first check the user's role\n        if user[\"role\"] not in [\"SELLER\", \"ADMIN\"]:\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"Not authorised\",\n                        \"message\": \"You are not authorised to perform this action!\",\n                    }",
+        "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
         "label": "products",
         "kind": 5,
         "importPath": "src.controllers.product_controller",
@@ -799,7 +826,7 @@
         "kind": 2,
         "importPath": "src.controllers.user_controller",
         "description": "src.controllers.user_controller",
-        "peekOfCode": "def getUsers():\n    try:\n        users = Users.query.all()\n        u_list = []\n        for user in users:\n            user_data = {\"id\": user.id, \"username\": user.username, \"email\": user.email}\n            u_list.append(user_data)\n        return Response(\n            response=json.dumps({\"status\": \"OK\", \"users\": u_list}),\n            status=200,",
+        "peekOfCode": "def getUsers():\n    try:\n        users = Users.query.all()\n        u_list = []\n        for user in users:\n            user_data = {\"id\": user.id, \"username\": user.username, \"email\": user.email}\n            u_list.append(user_data)\n        if len(u_list) == 0:\n            return Response(\n                response=json.dumps({\"status\": \"OK\", \"message\": \"No users found!\"}),",
         "detail": "src.controllers.user_controller",
         "documentation": {}
     },

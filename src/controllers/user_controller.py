@@ -258,6 +258,12 @@ def getUsers():
         for user in users:
             user_data = {"id": user.id, "username": user.username, "email": user.email}
             u_list.append(user_data)
+        if len(u_list) == 0:
+            return Response(
+                response=json.dumps({"status": "OK", "message": "No users found!"}),
+                status=200,
+                mimetype="application/json",
+            )
         return Response(
             response=json.dumps({"status": "OK", "users": u_list}),
             status=200,
