@@ -82,6 +82,38 @@
         "documentation": {}
     },
     {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "Blueprint",
         "importPath": "flask",
         "description": "flask",
@@ -194,6 +226,55 @@
         "documentation": {}
     },
     {
+        "label": "token_required",
+        "importPath": "src.middlewares.protected_middleware",
+        "description": "src.middlewares.protected_middleware",
+        "isExtraImport": true,
+        "detail": "src.middlewares.protected_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "token_required",
+        "importPath": "src.middlewares.protected_middleware",
+        "description": "src.middlewares.protected_middleware",
+        "isExtraImport": true,
+        "detail": "src.middlewares.protected_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "src.models.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "CartItems",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "isExtraImport": true,
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Carts",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "isExtraImport": true,
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "isExtraImport": true,
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
         "label": "Product",
         "importPath": "src.models.models",
         "description": "src.models.models",
@@ -210,35 +291,27 @@
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "Users",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
         "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "src.models.models",
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "Carts",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
         "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "src.models.models",
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "db",
+        "importPath": "src",
+        "description": "src",
         "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "upload_image",
-        "importPath": "src.utils",
-        "description": "src.utils",
-        "isExtraImport": true,
-        "detail": "src.utils",
+        "detail": "src",
         "documentation": {}
     },
     {
@@ -279,6 +352,54 @@
         "description": "src",
         "isExtraImport": true,
         "detail": "src",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "upload_image",
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "isExtraImport": true,
+        "detail": "src.utils",
+        "documentation": {}
+    },
+    {
+        "label": "bcrypt",
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "users",
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.user_controller",
         "documentation": {}
     },
     {
@@ -348,19 +469,19 @@
         "documentation": {}
     },
     {
-        "label": "users",
-        "importPath": "src.controllers.user_controller",
-        "description": "src.controllers.user_controller",
-        "isExtraImport": true,
-        "detail": "src.controllers.user_controller",
-        "documentation": {}
-    },
-    {
         "label": "products",
         "importPath": "src.controllers.product_controller",
         "description": "src.controllers.product_controller",
         "isExtraImport": true,
         "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
+        "label": "carts",
+        "importPath": "src.controllers.cart_controller",
+        "description": "src.controllers.cart_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.cart_controller",
         "documentation": {}
     },
     {
@@ -750,6 +871,24 @@
         "documentation": {}
     },
     {
+        "label": "addToCart",
+        "kind": 2,
+        "importPath": "src.controllers.cart_controller",
+        "description": "src.controllers.cart_controller",
+        "peekOfCode": "def addToCart(user):\n    try:\n        required_fields = [\"product_id\", \"quantity\"]\n        if all(field in request.json for field in required_fields):\n            # add to cart and decrease the product stock\n            # get the product and update it and also get the user id\n            data = request.json\n            product = Product.query.get(data[\"product_id\"])\n            if not product:\n                return Response(",
+        "detail": "src.controllers.cart_controller",
+        "documentation": {}
+    },
+    {
+        "label": "carts",
+        "kind": 5,
+        "importPath": "src.controllers.cart_controller",
+        "description": "src.controllers.cart_controller",
+        "peekOfCode": "carts = Blueprint(\"carts\", __name__)\n@carts.route(\"/add\", methods=[\"POST\"])\n@token_required\ndef addToCart(user):\n    try:\n        required_fields = [\"product_id\", \"quantity\"]\n        if all(field in request.json for field in required_fields):\n            # add to cart and decrease the product stock\n            # get the product and update it and also get the user id\n            data = request.json",
+        "detail": "src.controllers.cart_controller",
+        "documentation": {}
+    },
+    {
         "label": "addProduct",
         "kind": 2,
         "importPath": "src.controllers.product_controller",
@@ -763,7 +902,7 @@
         "kind": 2,
         "importPath": "src.controllers.product_controller",
         "description": "src.controllers.product_controller",
-        "peekOfCode": "def getProducts(user):\n    try:\n        products = Product.query.all()\n        p_list = []\n        for product in products:\n            product_data = {\n                \"id\": product.id,\n                \"name\": product.name,\n                \"description\": product.description,\n                \"price\": product.price,",
+        "peekOfCode": "def getProducts():\n    try:\n        products = Product.query.all()\n        p_list = []\n        for product in products:\n            product_data = {\n                \"id\": product.id,\n                \"name\": product.name,\n                \"description\": product.description,\n                \"price\": product.price,",
         "detail": "src.controllers.product_controller",
         "documentation": {}
     },
@@ -782,6 +921,15 @@
         "importPath": "src.controllers.product_controller",
         "description": "src.controllers.product_controller",
         "peekOfCode": "def updateProduct(user, id):\n    try:\n        # first check the user's role\n        if user[\"role\"] not in [\"SELLER\", \"ADMIN\"]:\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"Not authorised\",\n                        \"message\": \"You are not authorised to perform this action!\",\n                    }",
+        "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
+        "label": "deleteProduct",
+        "kind": 2,
+        "importPath": "src.controllers.product_controller",
+        "description": "src.controllers.product_controller",
+        "peekOfCode": "def deleteProduct(user, id):\n    try:\n        if user[\"role\"] != \"SELLER\" and user[\"role\"] != \"ADMIN\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not authorised to perform this action!\",\n                    }\n                ),",
         "detail": "src.controllers.product_controller",
         "documentation": {}
     },
@@ -817,7 +965,7 @@
         "kind": 2,
         "importPath": "src.controllers.user_controller",
         "description": "src.controllers.user_controller",
-        "peekOfCode": "def update(id):\n    try:\n        user = Users.query.get(id)\n        if not user:\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"Not Found!\",\n                        \"message\": \"User not found!\",\n                    }",
+        "peekOfCode": "def update(user, id):\n    try:\n        if str(user[\"user_id\"]) != str(id):\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"Not authorised\",\n                        \"message\": \"You are allowed to update your own account only!\",\n                    }\n                ),",
         "detail": "src.controllers.user_controller",
         "documentation": {}
     },
@@ -826,7 +974,7 @@
         "kind": 2,
         "importPath": "src.controllers.user_controller",
         "description": "src.controllers.user_controller",
-        "peekOfCode": "def getUsers():\n    try:\n        users = Users.query.all()\n        u_list = []\n        for user in users:\n            user_data = {\"id\": user.id, \"username\": user.username, \"email\": user.email}\n            u_list.append(user_data)\n        if len(u_list) == 0:\n            return Response(\n                response=json.dumps({\"status\": \"OK\", \"message\": \"No users found!\"}),",
+        "peekOfCode": "def getUsers(user):\n    try:\n        if user[\"role\"] not in [\"SELLER\", \"ADMIN\"]:\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"Not authorised\",\n                        \"message\": \"You are not authorised to perform this action!\",\n                    }\n                ),",
         "detail": "src.controllers.user_controller",
         "documentation": {}
     },
@@ -835,7 +983,7 @@
         "kind": 2,
         "importPath": "src.controllers.user_controller",
         "description": "src.controllers.user_controller",
-        "peekOfCode": "def delete(id):\n    try:\n        # get the user\n        user = Users.query.get(id=id)\n        if not user:\n            return Response(\n                response=json.dumps(\n                    {\"status\": \"Not found!\", \"message\": \"User not found!\"}\n                ),\n                status=404,",
+        "peekOfCode": "def delete(user, id):\n    try:\n        if str(user[\"user_id\"]) != str(id):\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"Not authorised\",\n                        \"message\": \"You are allowed to delete your own account only!\",\n                    }\n                ),",
         "detail": "src.controllers.user_controller",
         "documentation": {}
     },
@@ -916,7 +1064,7 @@
         "kind": 5,
         "importPath": "src.routes",
         "description": "src.routes",
-        "peekOfCode": "api = Blueprint(\"api\", __name__)\napi.register_blueprint(users, url_prefix=\"/users\")\napi.register_blueprint(products, url_prefix=\"/products\")",
+        "peekOfCode": "api = Blueprint(\"api\", __name__)\napi.register_blueprint(users, url_prefix=\"/users\")\napi.register_blueprint(products, url_prefix=\"/products\")\napi.register_blueprint(carts, url_prefix=\"/carts\")",
         "detail": "src.routes",
         "documentation": {}
     },

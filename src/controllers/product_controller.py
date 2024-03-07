@@ -11,10 +11,12 @@
 
 from flask import Blueprint, request, Response, json, jsonify
 from src.middlewares.protected_middleware import token_required
-from src.models.models import Product
+import src.models.models
 from datetime import datetime
 from src.utils import upload_image
 from src import db
+from src.controllers.user_controller import bcrypt
+from src.models.models import Product, Users
 
 products = Blueprint("products", __name__)
 
@@ -121,8 +123,7 @@ def addProduct(user):
 
 
 @products.route("/", methods=["GET"])
-@token_required
-def getProducts(user):
+def getProducts():
     try:
         products = Product.query.all()
 
@@ -246,21 +247,17 @@ def updateProduct(user, id):
                 mimetype="application/json",
             )
         data = request.form
-        print(data['name'])
-        print(data)
-        print(request.form['name'])
-        print("name" in data)
         # update the product
-        if "name" in data:
+        if "name" in data and data["name"] != "":
             product.name = data["name"]
-        if "description" in data:
+        if "description" in data and data["description"] != "":
             product.description = data["description"]
-        if "price" in data:
+        if "price" in data and data["price"] != "":
             product.price = data["price"]
-        if "quantity" in data:
+        if "quantity" in data and data["quantity"] != "":
             product.stock = data["quantity"]
 
-        if "image" in request.files:
+        if "image" in request.files and request.files["image"] != "":
             uploaded_file = request.files["image"]
             if uploaded_file.filename != "":
                 # If an image file is present, upload it
@@ -293,6 +290,99 @@ def updateProduct(user, id):
         )
     except Exception as e:
         print(e)
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "failed",
+                    "message": "Internal server error...",
+                    "error": str(e),
+                }
+            ),
+            status=500,
+            mimetype="application/json",
+        )
+
+
+@products.route("/delete/<int:id>", methods=["DELETE"])
+@token_required
+def deleteProduct(user, id):
+    try:
+        if user["role"] != "SELLER" and user["role"] != "ADMIN":
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "forbidden",
+                        "message": "You are not authorised to perform this action!",
+                    }
+                ),
+                status=403,
+                mimetype="application/json",
+            )
+
+        product = Product.query.get(id)
+        if not product:
+            return Response(
+                response=json.dumps(
+                    {"status": "not found", "message": "Product not found!"}
+                ),
+                status=404,
+                mimetype="application/json",
+            )
+
+        # get password and delete the product
+        data = request.json
+        if "password" not in data:
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "bad request",
+                        "message": "Password is required to delete the product!",
+                    }
+                ),
+                status=400,
+                mimetype="application/json",
+            )
+        # get user
+        user = Users.query.filter_by(email=user["email"]).first()
+        if not user:
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "not found",
+                        "message": "User not found!",
+                    }
+                ),
+                status=404,
+                mimetype="application/json",
+            )
+
+        # check if the password is valid
+        if not bcrypt.check_password_hash(user.password, data["password"]):
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "invalid password",
+                        "message": "Incorrect password!",
+                    }
+                ),
+                status=400,
+                mimetype="application/json",
+            )
+
+        # delete the user
+        db.session.delete(product)
+        db.session.commit()
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "success",
+                    "message": "Product deleted successfully...",
+                }
+            ),
+            status=200,
+            mimetype="application/json",
+        )
+    except Exception as e:
         return Response(
             response=json.dumps(
                 {
