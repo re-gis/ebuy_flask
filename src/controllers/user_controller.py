@@ -123,8 +123,9 @@ def login():
                     payload = {
                         "iat": datetime.utcnow(),
                         "user_id": str(user.id).replace("-", ""),
-                        "firstname": user.username,
+                        "username": user.username,
                         "email": user.email,
+                        "role":user.role
                     }
                     token = jwt.encode(
                         payload, os.getenv("SECRET_KEY"), algorithm="HS256"

@@ -13,7 +13,6 @@ def token_required(f):
         if "Authorization" in request.headers:
             token = request.headers["Authorization"].split()[1]  # Get token from header
 
-
         if not token:
             return jsonify({"error": "Token is missing"}), 401
 
@@ -22,9 +21,9 @@ def token_required(f):
             data = jwt.decode(token, os.getenv("SECRET_KEY"), algorithms=["HS256"])
             user = {
                 "user_id": data["user_id"],
-                "username": data["firstname"],
+                "username": data["username"],
                 "email": data["email"],
-                # "role": data["role"],
+                "role": data["role"],
             }
 
         except jwt.ExpiredSignatureError:

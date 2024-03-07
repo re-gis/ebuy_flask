@@ -114,6 +114,14 @@
         "documentation": {}
     },
     {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "request",
         "importPath": "flask",
         "description": "flask",
@@ -170,11 +178,27 @@
         "documentation": {}
     },
     {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "token_required",
         "importPath": "src.middlewares.protected_middleware",
         "description": "src.middlewares.protected_middleware",
         "isExtraImport": true,
         "detail": "src.middlewares.protected_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "isExtraImport": true,
+        "detail": "src.models.models",
         "documentation": {}
     },
     {
@@ -186,22 +210,6 @@
         "documentation": {}
     },
     {
-        "label": "bcrypt",
-        "importPath": "flask_bcrypt",
-        "description": "flask_bcrypt",
-        "isExtraImport": true,
-        "detail": "flask_bcrypt",
-        "documentation": {}
-    },
-    {
-        "label": "Bcrypt",
-        "importPath": "flask_bcrypt",
-        "description": "flask_bcrypt",
-        "isExtraImport": true,
-        "detail": "flask_bcrypt",
-        "documentation": {}
-    },
-    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -218,29 +226,27 @@
         "documentation": {}
     },
     {
-        "label": "jwt",
-        "kind": 6,
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
         "isExtraImport": true,
-        "importPath": "jwt",
-        "description": "jwt",
-        "detail": "jwt",
+        "detail": "datetime",
         "documentation": {}
     },
     {
-        "label": "PyJWT",
-        "importPath": "jwt",
-        "description": "jwt",
+        "label": "upload_image",
+        "importPath": "src.utils",
+        "description": "src.utils",
         "isExtraImport": true,
-        "detail": "jwt",
+        "detail": "src.utils",
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
+        "label": "db",
+        "importPath": "src",
+        "description": "src",
         "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
+        "detail": "src",
         "documentation": {}
     },
     {
@@ -273,6 +279,48 @@
         "description": "src",
         "isExtraImport": true,
         "detail": "src",
+        "documentation": {}
+    },
+    {
+        "label": "bcrypt",
+        "importPath": "flask_bcrypt",
+        "description": "flask_bcrypt",
+        "isExtraImport": true,
+        "detail": "flask_bcrypt",
+        "documentation": {}
+    },
+    {
+        "label": "Bcrypt",
+        "importPath": "flask_bcrypt",
+        "description": "flask_bcrypt",
+        "isExtraImport": true,
+        "detail": "flask_bcrypt",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "PyJWT",
+        "importPath": "jwt",
+        "description": "jwt",
+        "isExtraImport": true,
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
@@ -313,6 +361,23 @@
         "description": "src.controllers.product_controller",
         "isExtraImport": true,
         "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
+        "label": "upload",
+        "importPath": "cloudinary.uploader",
+        "description": "cloudinary.uploader",
+        "isExtraImport": true,
+        "detail": "cloudinary.uploader",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cloudinary",
+        "description": "cloudinary",
+        "detail": "cloudinary",
         "documentation": {}
     },
     {
@@ -689,7 +754,7 @@
         "kind": 2,
         "importPath": "src.controllers.product_controller",
         "description": "src.controllers.product_controller",
-        "peekOfCode": "def addProduct(user):\n    print(user)",
+        "peekOfCode": "def addProduct(user):\n    try:\n        if user[\"role\"] not in [\"SELLER\", \"ADMIN\"]:\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"Not authorised\",\n                        \"message\": \"You are not authorised to perform this action!\",\n                    }\n                ),",
         "detail": "src.controllers.product_controller",
         "documentation": {}
     },
@@ -698,7 +763,7 @@
         "kind": 5,
         "importPath": "src.controllers.product_controller",
         "description": "src.controllers.product_controller",
-        "peekOfCode": "products = Blueprint(\"products\", __name__)\n@products.route(\"/add\", methods=[\"POST\"])\n@token_required\ndef addProduct(user):\n    print(user)",
+        "peekOfCode": "products = Blueprint(\"products\", __name__)\n@products.route(\"/add\", methods=[\"POST\"])\n@token_required\ndef addProduct(user):\n    try:\n        if user[\"role\"] not in [\"SELLER\", \"ADMIN\"]:\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"Not authorised\",",
         "detail": "src.controllers.product_controller",
         "documentation": {}
     },
@@ -797,7 +862,7 @@
         "kind": 6,
         "importPath": "src.models.models",
         "description": "src.models.models",
-        "peekOfCode": "class Product(db.Model):\n    __tablename__ = \"products\"\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), unique=False, nullable=False)\n    stock = db.Column(db.Integer)\n    image_url = db.Column(db.String(200), nullable=False)\n    description = db.Column(db.String(200), nullable=False)\n    price = db.Column(db.Float, nullable=False)\n    date_added = db.Column(db.DateTime, default=datetime.utcnow)\nclass Carts(db.Model):",
+        "peekOfCode": "class Product(db.Model):\n    __tablename__ = \"products\"\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), unique=True, nullable=False)\n    stock = db.Column(db.Integer)\n    image_url = db.Column(db.String(200), nullable=False)\n    description = db.Column(db.String(200), nullable=False)\n    price = db.Column(db.Float, nullable=False)\n    date_added = db.Column(db.DateTime, default=datetime.utcnow)\nclass Carts(db.Model):",
         "detail": "src.models.models",
         "documentation": {}
     },
@@ -826,6 +891,15 @@
         "description": "src.routes",
         "peekOfCode": "api = Blueprint(\"api\", __name__)\napi.register_blueprint(users, url_prefix=\"/users\")\napi.register_blueprint(products, url_prefix=\"/products\")",
         "detail": "src.routes",
+        "documentation": {}
+    },
+    {
+        "label": "upload_image",
+        "kind": 2,
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "peekOfCode": "def upload_image(file) -> str:\n    if not file:\n        return jsonify({\"error\": \"No file part\"}), 400\n    if file.filename == \"\":\n        return jsonify({\"error\": \"No selected file\"}), 400\n    # Upload the image to Cloudinary\n    try:\n        upload_result = upload(file)\n        return upload_result[\"url\"]\n    except Exception as e:",
+        "detail": "src.utils",
         "documentation": {}
     }
 ]

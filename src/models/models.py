@@ -18,7 +18,7 @@ class Users(db.Model):
 class Product(db.Model):
     __tablename__ = "products"
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), unique=False, nullable=False)
+    name = db.Column(db.String(100), unique=True, nullable=False)
     stock = db.Column(db.Integer)
     image_url = db.Column(db.String(200), nullable=False)
     description = db.Column(db.String(200), nullable=False)
