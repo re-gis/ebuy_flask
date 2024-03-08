@@ -1004,6 +1004,15 @@
         "documentation": {}
     },
     {
+        "label": "removeFromCarts",
+        "kind": 2,
+        "importPath": "src.controllers.cart_controller",
+        "description": "src.controllers.cart_controller",
+        "peekOfCode": "def removeFromCarts(user, cartId):\n    try:\n        cart = Carts.query.get(cartId)\n        if not cart:\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"not found\",\n                        \"message\": \"Cart not found!\",\n                    }",
+        "detail": "src.controllers.cart_controller",
+        "documentation": {}
+    },
+    {
         "label": "carts",
         "kind": 5,
         "importPath": "src.controllers.cart_controller",
