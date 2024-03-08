@@ -56,12 +56,10 @@ def registerUser():
                 token = jwt.encode(
                     payload=payload, key=os.getenv("SECRET_KEY"), algorithm="HS256"
                 )
-                
+
                 # create user cart
-                cart = Carts(
-                    owner_id=user_object.id
-                )
-                
+                cart = Carts(owner_id=user_object.id, total_quantity=0, total_price=0)
+
                 db.session.add(cart)
                 db.session.commit()
                 return Response(

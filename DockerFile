@@ -1,0 +1,20 @@
+FROM python:3.9-slim
+
+# environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+WORKDIR /app
+
+COPY . /app
+
+# Update the pip
+RUN pip install --upgrade pip
+
+# Install dependencies in requirements.txt
+RUN pip install -r requirements.txt
+
+EXPOSE 5000
+
+# Command to run the Flask application
+CMD ["python", "app.py"]

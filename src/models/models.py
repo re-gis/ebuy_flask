@@ -32,6 +32,8 @@ class Carts(db.Model):
     owner_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     owner = db.relationship("Users", backref="carts", lazy=True)
     cart_items = db.relationship("CartItems", backref="cart", lazy="dynamic")
+    total_quantity = db.Column(db.Integer)
+    total_price = db.Column(db.Float)
 
 
 class CartItems(db.Model):
@@ -40,3 +42,4 @@ class CartItems(db.Model):
     product_name = db.Column(db.String(100), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     cart_id = db.Column(db.Integer, db.ForeignKey("carts.id"))
+    total_price = db.Column(db.Float)
