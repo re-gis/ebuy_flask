@@ -2,6 +2,7 @@ from flask import request, Response, json, Blueprint
 from src.middlewares.protected_middleware import token_required
 from src.models.models import CartItems, Carts, Product
 from src import db
+from src.controllers.product_controller import products
 
 
 carts = Blueprint("carts", __name__)
@@ -257,4 +258,68 @@ def removeFromCarts(user, cartId):
         )
 
 
+@carts.route("/")
+@token_required
+def getCarts(user):
+    try:
+        if user["role"] == "CLIENT":
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "forbidden",
+                        "message": "You are not allowed to perform this action!",
+                    }
+                ),
+                status=403,
+                mimetype="application/json",
+            )
 
+        f_carts = []
+        carts = Carts.query.all()
+
+        if len(carts) == 0:
+            return Response(
+                response=json.dumps({"status": "ok", "message": "No carts available!"}),
+                status=200,
+                mimetype="application/json",
+            )
+
+        for cart in carts:
+            c_object = {
+                "id": cart.id,
+                "owner": cart.owner,
+                "owner": {
+                    "user_id": cart.owner.id,
+                    "name": cart.owner.username,
+                    "email": cart.owner.email,
+                },
+                "total_quantity": cart.total_quantity,
+                "total_price": cart.total_price,
+            }
+
+            f_carts.append(c_object)
+
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "success",
+                    "message": "Carts successfully fetched!",
+                    "carts": f_carts,
+                }
+            ),
+            status=200,
+            mimetype="application/json",
+        )
+    except Exception as e:
+        print(e)
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "failed",
+                    "message": "Internal server error...",
+                    "error": str(e),
+                }
+            ),
+            status=500,
+            mimetype="application/json",
+        )

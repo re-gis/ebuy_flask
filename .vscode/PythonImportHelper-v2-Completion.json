@@ -371,6 +371,22 @@
         "documentation": {}
     },
     {
+        "label": "products",
+        "importPath": "src.controllers.product_controller",
+        "description": "src.controllers.product_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
+        "label": "products",
+        "importPath": "src.controllers.product_controller",
+        "description": "src.controllers.product_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -482,14 +498,6 @@
         "description": "flask_sqlalchemy",
         "isExtraImport": true,
         "detail": "flask_sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "products",
-        "importPath": "src.controllers.product_controller",
-        "description": "src.controllers.product_controller",
-        "isExtraImport": true,
-        "detail": "src.controllers.product_controller",
         "documentation": {}
     },
     {
@@ -1009,6 +1017,15 @@
         "importPath": "src.controllers.cart_controller",
         "description": "src.controllers.cart_controller",
         "peekOfCode": "def removeFromCarts(user, cartId):\n    try:\n        cart = Carts.query.get(cartId)\n        if not cart:\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"not found\",\n                        \"message\": \"Cart not found!\",\n                    }",
+        "detail": "src.controllers.cart_controller",
+        "documentation": {}
+    },
+    {
+        "label": "getCarts",
+        "kind": 2,
+        "importPath": "src.controllers.cart_controller",
+        "description": "src.controllers.cart_controller",
+        "peekOfCode": "def getCarts(user):\n    try:\n        if user[\"role\"] == \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
         "detail": "src.controllers.cart_controller",
         "documentation": {}
     },
