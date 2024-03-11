@@ -262,7 +262,7 @@ def update(user, id):
         payload = {
             "iat": datetime.utcnow(),
             "user_id": str(user.id).replace("-", ""),
-            "firstname": user.username,
+            "username": user.username,
             "email": user.email,
         }
         token = jwt.encode(payload, os.getenv("SECRET_KEY"), algorithm="HS256")

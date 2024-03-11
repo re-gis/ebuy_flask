@@ -1,6 +1,6 @@
 from flask import request, Response, json, Blueprint
 from src.middlewares.protected_middleware import token_required
-from src.models.models import CartItems, Carts, Product
+from src.models.models import CartItems, Carts, Product, Users
 from src import db
 from src.controllers.product_controller import products
 
@@ -312,6 +312,124 @@ def getCarts(user):
         )
     except Exception as e:
         print(e)
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "failed",
+                    "message": "Internal server error...",
+                    "error": str(e),
+                }
+            ),
+            status=500,
+            mimetype="application/json",
+        )
+
+
+@carts.route("/mine", methods=["GET"])
+@token_required
+def getMyCart(user):
+    try:
+        user_id = user["user_id"]
+        # get cart whose owner id = user_id
+        cart = Carts.query.filter_by(owner_id=int(user_id)).first()
+        print(cart)
+        if not cart:
+            return Response(
+                response=json.dumps(
+                    {"status": "not found", "message": "No cart found!"}
+                ),
+                status=404,
+                mimetype="application/json",
+            )
+
+        owner = {
+            "user_id": user_id,
+            "email": user["email"],
+            "username": user["username"],
+        }
+
+        cart_object = {
+            "cart_id": cart.id,
+            "owner": owner,
+            "total quantity": cart.total_quantity,
+            "total_price": cart.total_price,
+        }
+
+        return Response(
+            response=json.dumps({"status": "success", "cart": cart_object}),
+            status=200,
+            mimetype="application/json",
+        )
+    except Exception as e:
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "failed",
+                    "message": "Internal server error...",
+                    "error": str(e),
+                }
+            ),
+            status=500,
+            mimetype="application/json",
+        )
+
+
+@carts.route("/<int:cart_id>", methods=["GET"])
+@token_required
+def getCartById(user, cart_id):
+    try:
+        if user["role"] == "CLIENT":
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "forbidden",
+                        "message": "You are not authorised to perform this action!",
+                    }
+                ),
+                status=403,
+                mimetype="application/json",
+            )
+
+        # get the cart with the id
+        cart = Carts.query.filter_by(id=cart_id).first()
+
+        if not cart:
+            return Response(
+                response=json.dumps(
+                    {"status": "not found!", "message": "Cart not found!"}
+                ),
+                status=404,
+                mimetype="application/json",
+            )
+        user = Users.query.get(cart.owner_id)
+        if not user:
+            return Response(
+                response=json.dumps(
+                    {"status": "not found!", "message": "User not found!"}
+                ),
+                status=404,
+                mimetype="application/json",
+            )
+
+        owner = {
+            "user_id": user.id,
+            "email": user.email,
+            "username": user.username,
+        }
+
+        cart_object = {
+            "cart_id": cart.id,
+            "owner": owner,
+            "total quantity": cart.total_quantity,
+            "total_price": cart.total_price,
+        }
+
+        return Response(
+            response=json.dumps({"status": "success", "cart": cart_object}),
+            status=200,
+            mimetype="application/json",
+        )
+    except Exception as e:
         return Response(
             response=json.dumps(
                 {

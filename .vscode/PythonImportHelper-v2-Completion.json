@@ -291,6 +291,14 @@
         "documentation": {}
     },
     {
+        "label": "Users",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "isExtraImport": true,
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
         "label": "Product",
         "importPath": "src.models.models",
         "description": "src.models.models",
@@ -1026,6 +1034,24 @@
         "importPath": "src.controllers.cart_controller",
         "description": "src.controllers.cart_controller",
         "peekOfCode": "def getCarts(user):\n    try:\n        if user[\"role\"] == \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
+        "detail": "src.controllers.cart_controller",
+        "documentation": {}
+    },
+    {
+        "label": "getMyCart",
+        "kind": 2,
+        "importPath": "src.controllers.cart_controller",
+        "description": "src.controllers.cart_controller",
+        "peekOfCode": "def getMyCart(user):\n    try:\n        user_id = user[\"user_id\"]\n        # get cart whose owner id = user_id\n        cart = Carts.query.filter_by(owner_id=int(user_id)).first()\n        print(cart)\n        if not cart:\n            return Response(\n                response=json.dumps(\n                    {\"status\": \"not found\", \"message\": \"No cart found!\"}",
+        "detail": "src.controllers.cart_controller",
+        "documentation": {}
+    },
+    {
+        "label": "getCartById",
+        "kind": 2,
+        "importPath": "src.controllers.cart_controller",
+        "description": "src.controllers.cart_controller",
+        "peekOfCode": "def getCartById(user, cart_id):\n    try:\n        if user[\"role\"] == \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not authorised to perform this action!\",\n                    }\n                ),",
         "detail": "src.controllers.cart_controller",
         "documentation": {}
     },
