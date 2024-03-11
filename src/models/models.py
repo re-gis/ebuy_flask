@@ -43,3 +43,36 @@ class CartItems(db.Model):
     quantity = db.Column(db.Integer, nullable=False)
     cart_id = db.Column(db.Integer, db.ForeignKey("carts.id"))
     total_price = db.Column(db.Float)
+
+
+class Orders(db.Model):
+    __tablename__ = "orders"
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
+    user = db.relationship("Users", backref="orders", lazy=True)
+    location_id = db.Column(db.Integer, db.ForeignKey("locations.id"), nullable=False)
+    location = db.relationship("UserLocations", backref="orders", lazy=True)
+    total_price = db.Column(db.Float, nullable=False)
+    status = db.Column(db.String(50), nullable=False)
+    order_items = db.relationship("OrderItems", backref="Orders", lazy="dynamic")
+    order_date = db.Column(db.DateTime, default=datetime.utcnow)
+
+
+class OrderItems(db.Model):
+    __tablename__ = "order_items"
+    id = db.Column(db.Integer, primary_key=True)
+    order_id = db.Column(db.Integer, db.ForeignKey("orders.id"), nullable=False)
+    product_name = db.Column(db.String(100), nullable=False)
+    quantity = db.Column(db.Integer, nullable=False)
+    total_price = db.Column(db.Float, nullable=False)
+
+
+class UserLocations(db.Model):
+    __tablename__ = "locations"
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
+    user = db.relationship("Users", backref="UserLocations", lazy=True)
+    country = db.Column(db.String(100), nullable=False)
+    province = db.Column(db.String(100), nullable=False)
+    district = db.Column(db.String(100), nullable=False)
+    sector = db.Column(db.String(100), nullable=False)

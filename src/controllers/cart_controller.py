@@ -2,7 +2,6 @@ from flask import request, Response, json, Blueprint
 from src.middlewares.protected_middleware import token_required
 from src.models.models import CartItems, Carts, Product, Users
 from src import db
-from src.controllers.product_controller import products
 
 
 carts = Blueprint("carts", __name__)

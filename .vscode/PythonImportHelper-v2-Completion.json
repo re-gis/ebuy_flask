@@ -56,6 +56,30 @@
         "documentation": {}
     },
     {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
         "label": "context",
         "importPath": "alembic",
         "description": "alembic",
@@ -130,6 +154,38 @@
         "documentation": {}
     },
     {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "Blueprint",
         "importPath": "flask",
         "description": "flask",
@@ -231,6 +287,14 @@
         "description": "flask",
         "isExtraImport": true,
         "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "token_required",
+        "importPath": "src.middlewares.protected_middleware",
+        "description": "src.middlewares.protected_middleware",
+        "isExtraImport": true,
+        "detail": "src.middlewares.protected_middleware",
         "documentation": {}
     },
     {
@@ -299,6 +363,38 @@
         "documentation": {}
     },
     {
+        "label": "Carts",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "isExtraImport": true,
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItems",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "isExtraImport": true,
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Orders",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "isExtraImport": true,
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserLocations",
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "isExtraImport": true,
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
         "label": "Product",
         "importPath": "src.models.models",
         "description": "src.models.models",
@@ -363,6 +459,14 @@
         "documentation": {}
     },
     {
+        "label": "db",
+        "importPath": "src",
+        "description": "src",
+        "isExtraImport": true,
+        "detail": "src",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "importPath": "src",
         "description": "src",
@@ -379,19 +483,11 @@
         "documentation": {}
     },
     {
-        "label": "products",
-        "importPath": "src.controllers.product_controller",
-        "description": "src.controllers.product_controller",
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
         "isExtraImport": true,
-        "detail": "src.controllers.product_controller",
-        "documentation": {}
-    },
-    {
-        "label": "products",
-        "importPath": "src.controllers.product_controller",
-        "description": "src.controllers.product_controller",
-        "isExtraImport": true,
-        "detail": "src.controllers.product_controller",
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -509,11 +605,27 @@
         "documentation": {}
     },
     {
+        "label": "products",
+        "importPath": "src.controllers.product_controller",
+        "description": "src.controllers.product_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.product_controller",
+        "documentation": {}
+    },
+    {
         "label": "carts",
         "importPath": "src.controllers.cart_controller",
         "description": "src.controllers.cart_controller",
         "isExtraImport": true,
         "detail": "src.controllers.cart_controller",
+        "documentation": {}
+    },
+    {
+        "label": "orders",
+        "importPath": "src.controllers.order_controller",
+        "description": "src.controllers.order_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.order_controller",
         "documentation": {}
     },
     {
@@ -531,6 +643,114 @@
         "importPath": "cloudinary",
         "description": "cloudinary",
         "detail": "cloudinary",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.000e821967ea_adding_status",
+        "description": "migrations.versions.000e821967ea_adding_status",
+        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('locations', schema=None) as batch_op:\n        batch_op.drop_constraint('locations_country_key', type_='unique')\n        batch_op.drop_constraint('locations_district_key', type_='unique')\n        batch_op.drop_constraint('locations_province_key', type_='unique')\n        batch_op.drop_constraint('locations_sector_key', type_='unique')\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###",
+        "detail": "migrations.versions.000e821967ea_adding_status",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.000e821967ea_adding_status",
+        "description": "migrations.versions.000e821967ea_adding_status",
+        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('locations', schema=None) as batch_op:\n        batch_op.create_unique_constraint('locations_sector_key', ['sector'])\n        batch_op.create_unique_constraint('locations_province_key', ['province'])\n        batch_op.create_unique_constraint('locations_district_key', ['district'])\n        batch_op.create_unique_constraint('locations_country_key', ['country'])\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.000e821967ea_adding_status",
+        "documentation": {}
+    },
+    {
+        "label": "revision",
+        "kind": 5,
+        "importPath": "migrations.versions.000e821967ea_adding_status",
+        "description": "migrations.versions.000e821967ea_adding_status",
+        "peekOfCode": "revision = '000e821967ea'\ndown_revision = '97f487506182'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('locations', schema=None) as batch_op:\n        batch_op.drop_constraint('locations_country_key', type_='unique')\n        batch_op.drop_constraint('locations_district_key', type_='unique')\n        batch_op.drop_constraint('locations_province_key', type_='unique')",
+        "detail": "migrations.versions.000e821967ea_adding_status",
+        "documentation": {}
+    },
+    {
+        "label": "down_revision",
+        "kind": 5,
+        "importPath": "migrations.versions.000e821967ea_adding_status",
+        "description": "migrations.versions.000e821967ea_adding_status",
+        "peekOfCode": "down_revision = '97f487506182'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('locations', schema=None) as batch_op:\n        batch_op.drop_constraint('locations_country_key', type_='unique')\n        batch_op.drop_constraint('locations_district_key', type_='unique')\n        batch_op.drop_constraint('locations_province_key', type_='unique')\n        batch_op.drop_constraint('locations_sector_key', type_='unique')",
+        "detail": "migrations.versions.000e821967ea_adding_status",
+        "documentation": {}
+    },
+    {
+        "label": "branch_labels",
+        "kind": 5,
+        "importPath": "migrations.versions.000e821967ea_adding_status",
+        "description": "migrations.versions.000e821967ea_adding_status",
+        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('locations', schema=None) as batch_op:\n        batch_op.drop_constraint('locations_country_key', type_='unique')\n        batch_op.drop_constraint('locations_district_key', type_='unique')\n        batch_op.drop_constraint('locations_province_key', type_='unique')\n        batch_op.drop_constraint('locations_sector_key', type_='unique')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.000e821967ea_adding_status",
+        "documentation": {}
+    },
+    {
+        "label": "depends_on",
+        "kind": 5,
+        "importPath": "migrations.versions.000e821967ea_adding_status",
+        "description": "migrations.versions.000e821967ea_adding_status",
+        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('locations', schema=None) as batch_op:\n        batch_op.drop_constraint('locations_country_key', type_='unique')\n        batch_op.drop_constraint('locations_district_key', type_='unique')\n        batch_op.drop_constraint('locations_province_key', type_='unique')\n        batch_op.drop_constraint('locations_sector_key', type_='unique')\n    # ### end Alembic commands ###\ndef downgrade():",
+        "detail": "migrations.versions.000e821967ea_adding_status",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.2ae57f131dce_adding_orders",
+        "description": "migrations.versions.2ae57f131dce_adding_orders",
+        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('locations',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('user_id', sa.Integer(), nullable=False),\n    sa.Column('country', sa.String(length=100), nullable=False),\n    sa.Column('province', sa.String(length=100), nullable=False),\n    sa.Column('district', sa.String(length=100), nullable=False),\n    sa.Column('sector', sa.String(length=100), nullable=False),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),",
+        "detail": "migrations.versions.2ae57f131dce_adding_orders",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.2ae57f131dce_adding_orders",
+        "description": "migrations.versions.2ae57f131dce_adding_orders",
+        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('order_items')\n    op.drop_table('orders')\n    op.drop_table('locations')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.2ae57f131dce_adding_orders",
+        "documentation": {}
+    },
+    {
+        "label": "revision",
+        "kind": 5,
+        "importPath": "migrations.versions.2ae57f131dce_adding_orders",
+        "description": "migrations.versions.2ae57f131dce_adding_orders",
+        "peekOfCode": "revision = '2ae57f131dce'\ndown_revision = '4a650a9a28b8'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('locations',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('user_id', sa.Integer(), nullable=False),\n    sa.Column('country', sa.String(length=100), nullable=False),",
+        "detail": "migrations.versions.2ae57f131dce_adding_orders",
+        "documentation": {}
+    },
+    {
+        "label": "down_revision",
+        "kind": 5,
+        "importPath": "migrations.versions.2ae57f131dce_adding_orders",
+        "description": "migrations.versions.2ae57f131dce_adding_orders",
+        "peekOfCode": "down_revision = '4a650a9a28b8'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('locations',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('user_id', sa.Integer(), nullable=False),\n    sa.Column('country', sa.String(length=100), nullable=False),\n    sa.Column('province', sa.String(length=100), nullable=False),",
+        "detail": "migrations.versions.2ae57f131dce_adding_orders",
+        "documentation": {}
+    },
+    {
+        "label": "branch_labels",
+        "kind": 5,
+        "importPath": "migrations.versions.2ae57f131dce_adding_orders",
+        "description": "migrations.versions.2ae57f131dce_adding_orders",
+        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('locations',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('user_id', sa.Integer(), nullable=False),\n    sa.Column('country', sa.String(length=100), nullable=False),\n    sa.Column('province', sa.String(length=100), nullable=False),\n    sa.Column('district', sa.String(length=100), nullable=False),",
+        "detail": "migrations.versions.2ae57f131dce_adding_orders",
+        "documentation": {}
+    },
+    {
+        "label": "depends_on",
+        "kind": 5,
+        "importPath": "migrations.versions.2ae57f131dce_adding_orders",
+        "description": "migrations.versions.2ae57f131dce_adding_orders",
+        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('locations',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('user_id', sa.Integer(), nullable=False),\n    sa.Column('country', sa.String(length=100), nullable=False),\n    sa.Column('province', sa.String(length=100), nullable=False),\n    sa.Column('district', sa.String(length=100), nullable=False),\n    sa.Column('sector', sa.String(length=100), nullable=False),",
+        "detail": "migrations.versions.2ae57f131dce_adding_orders",
         "documentation": {}
     },
     {
@@ -747,6 +967,60 @@
         "description": "migrations.versions.87a0fa6e61b0_adding_columns",
         "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('carts', schema=None) as batch_op:\n        batch_op.add_column(sa.Column('total_quantity', sa.Integer(), nullable=True))\n        batch_op.add_column(sa.Column('total_price', sa.Float(), nullable=True))\n    with op.batch_alter_table('products', schema=None) as batch_op:\n        batch_op.create_unique_constraint(None, ['name'])\n    # ### end Alembic commands ###\ndef downgrade():",
         "detail": "migrations.versions.87a0fa6e61b0_adding_columns",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.97f487506182_adding_status",
+        "description": "migrations.versions.97f487506182_adding_status",
+        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('orders', schema=None) as batch_op:\n        batch_op.add_column(sa.Column('status', sa.String(length=50), nullable=False))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('orders', schema=None) as batch_op:\n        batch_op.drop_column('status')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.97f487506182_adding_status",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.97f487506182_adding_status",
+        "description": "migrations.versions.97f487506182_adding_status",
+        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('orders', schema=None) as batch_op:\n        batch_op.drop_column('status')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.97f487506182_adding_status",
+        "documentation": {}
+    },
+    {
+        "label": "revision",
+        "kind": 5,
+        "importPath": "migrations.versions.97f487506182_adding_status",
+        "description": "migrations.versions.97f487506182_adding_status",
+        "peekOfCode": "revision = '97f487506182'\ndown_revision = '2ae57f131dce'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('orders', schema=None) as batch_op:\n        batch_op.add_column(sa.Column('status', sa.String(length=50), nullable=False))\n    # ### end Alembic commands ###\ndef downgrade():",
+        "detail": "migrations.versions.97f487506182_adding_status",
+        "documentation": {}
+    },
+    {
+        "label": "down_revision",
+        "kind": 5,
+        "importPath": "migrations.versions.97f487506182_adding_status",
+        "description": "migrations.versions.97f487506182_adding_status",
+        "peekOfCode": "down_revision = '2ae57f131dce'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('orders', schema=None) as batch_op:\n        batch_op.add_column(sa.Column('status', sa.String(length=50), nullable=False))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###",
+        "detail": "migrations.versions.97f487506182_adding_status",
+        "documentation": {}
+    },
+    {
+        "label": "branch_labels",
+        "kind": 5,
+        "importPath": "migrations.versions.97f487506182_adding_status",
+        "description": "migrations.versions.97f487506182_adding_status",
+        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('orders', schema=None) as batch_op:\n        batch_op.add_column(sa.Column('status', sa.String(length=50), nullable=False))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('orders', schema=None) as batch_op:",
+        "detail": "migrations.versions.97f487506182_adding_status",
+        "documentation": {}
+    },
+    {
+        "label": "depends_on",
+        "kind": 5,
+        "importPath": "migrations.versions.97f487506182_adding_status",
+        "description": "migrations.versions.97f487506182_adding_status",
+        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('orders', schema=None) as batch_op:\n        batch_op.add_column(sa.Column('status', sa.String(length=50), nullable=False))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    with op.batch_alter_table('orders', schema=None) as batch_op:\n        batch_op.drop_column('status')",
+        "detail": "migrations.versions.97f487506182_adding_status",
         "documentation": {}
     },
     {
@@ -1065,6 +1339,60 @@
         "documentation": {}
     },
     {
+        "label": "order",
+        "kind": 2,
+        "importPath": "src.controllers.order_controller",
+        "description": "src.controllers.order_controller",
+        "peekOfCode": "def order(user):\n    try:\n        if user[\"role\"] != \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
+        "detail": "src.controllers.order_controller",
+        "documentation": {}
+    },
+    {
+        "label": "getOrders",
+        "kind": 2,
+        "importPath": "src.controllers.order_controller",
+        "description": "src.controllers.order_controller",
+        "peekOfCode": "def getOrders(user):\n    try:\n        if user[\"role\"] == \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
+        "detail": "src.controllers.order_controller",
+        "documentation": {}
+    },
+    {
+        "label": "getMyOrders",
+        "kind": 2,
+        "importPath": "src.controllers.order_controller",
+        "description": "src.controllers.order_controller",
+        "peekOfCode": "def getMyOrders(user):\n    try:\n        if user[\"role\"] != \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
+        "detail": "src.controllers.order_controller",
+        "documentation": {}
+    },
+    {
+        "label": "getOrderById",
+        "kind": 2,
+        "importPath": "src.controllers.order_controller",
+        "description": "src.controllers.order_controller",
+        "peekOfCode": "def getOrderById(user, order_id):\n    try:\n        # Fetch the order by ID\n        if user[\"role\"] == \"CLIENT\":\n            order = Orders.query.filter_by(id=order_id, user_id=user[\"user_id\"]).first()\n        else:\n            order = Orders.query.get(order_id)\n        if not order:\n            return Response(\n                response=json.dumps(",
+        "detail": "src.controllers.order_controller",
+        "documentation": {}
+    },
+    {
+        "label": "deliver",
+        "kind": 2,
+        "importPath": "src.controllers.order_controller",
+        "description": "src.controllers.order_controller",
+        "peekOfCode": "def deliver(user, order_id):\n    try:\n        if user[\"role\"] == \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
+        "detail": "src.controllers.order_controller",
+        "documentation": {}
+    },
+    {
+        "label": "orders",
+        "kind": 5,
+        "importPath": "src.controllers.order_controller",
+        "description": "src.controllers.order_controller",
+        "peekOfCode": "orders = Blueprint(\"orders\", __name__)\n@orders.route(\"/\", methods=[\"POST\"])\n@token_required\ndef order(user):\n    try:\n        if user[\"role\"] != \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",",
+        "detail": "src.controllers.order_controller",
+        "documentation": {}
+    },
+    {
         "label": "addProduct",
         "kind": 2,
         "importPath": "src.controllers.product_controller",
@@ -1231,7 +1559,34 @@
         "kind": 6,
         "importPath": "src.models.models",
         "description": "src.models.models",
-        "peekOfCode": "class CartItems(db.Model):\n    __tablename__ = \"cart_items\"\n    id = db.Column(db.Integer, primary_key=True)\n    product_name = db.Column(db.String(100), nullable=False)\n    quantity = db.Column(db.Integer, nullable=False)\n    cart_id = db.Column(db.Integer, db.ForeignKey(\"carts.id\"))\n    total_price = db.Column(db.Float)",
+        "peekOfCode": "class CartItems(db.Model):\n    __tablename__ = \"cart_items\"\n    id = db.Column(db.Integer, primary_key=True)\n    product_name = db.Column(db.String(100), nullable=False)\n    quantity = db.Column(db.Integer, nullable=False)\n    cart_id = db.Column(db.Integer, db.ForeignKey(\"carts.id\"))\n    total_price = db.Column(db.Float)\nclass Orders(db.Model):\n    __tablename__ = \"orders\"\n    id = db.Column(db.Integer, primary_key=True)",
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Orders",
+        "kind": 6,
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "peekOfCode": "class Orders(db.Model):\n    __tablename__ = \"orders\"\n    id = db.Column(db.Integer, primary_key=True)\n    user_id = db.Column(db.Integer, db.ForeignKey(\"users.id\"), nullable=False)\n    user = db.relationship(\"Users\", backref=\"orders\", lazy=True)\n    location_id = db.Column(db.Integer, db.ForeignKey(\"locations.id\"), nullable=False)\n    location = db.relationship(\"UserLocations\", backref=\"orders\", lazy=True)\n    total_price = db.Column(db.Float, nullable=False)\n    status = db.Column(db.String(50), nullable=False)\n    order_items = db.relationship(\"OrderItems\", backref=\"Orders\", lazy=\"dynamic\")",
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItems",
+        "kind": 6,
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "peekOfCode": "class OrderItems(db.Model):\n    __tablename__ = \"order_items\"\n    id = db.Column(db.Integer, primary_key=True)\n    order_id = db.Column(db.Integer, db.ForeignKey(\"orders.id\"), nullable=False)\n    product_name = db.Column(db.String(100), nullable=False)\n    quantity = db.Column(db.Integer, nullable=False)\n    total_price = db.Column(db.Float, nullable=False)\nclass UserLocations(db.Model):\n    __tablename__ = \"locations\"\n    id = db.Column(db.Integer, primary_key=True)",
+        "detail": "src.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserLocations",
+        "kind": 6,
+        "importPath": "src.models.models",
+        "description": "src.models.models",
+        "peekOfCode": "class UserLocations(db.Model):\n    __tablename__ = \"locations\"\n    id = db.Column(db.Integer, primary_key=True)\n    user_id = db.Column(db.Integer, db.ForeignKey(\"users.id\"), nullable=False)\n    user = db.relationship(\"Users\", backref=\"UserLocations\", lazy=True)\n    country = db.Column(db.String(100), nullable=False)\n    province = db.Column(db.String(100), nullable=False)\n    district = db.Column(db.String(100), nullable=False)\n    sector = db.Column(db.String(100), nullable=False)",
         "detail": "src.models.models",
         "documentation": {}
     },
@@ -1240,7 +1595,7 @@
         "kind": 5,
         "importPath": "src.routes",
         "description": "src.routes",
-        "peekOfCode": "api = Blueprint(\"api\", __name__)\napi.register_blueprint(users, url_prefix=\"/users\")\napi.register_blueprint(products, url_prefix=\"/products\")\napi.register_blueprint(carts, url_prefix=\"/carts\")",
+        "peekOfCode": "api = Blueprint(\"api\", __name__)\napi.register_blueprint(users, url_prefix=\"/users\")\napi.register_blueprint(products, url_prefix=\"/products\")\napi.register_blueprint(carts, url_prefix=\"/carts\")\napi.register_blueprint(orders, url_prefix=\"/orders\")",
         "detail": "src.routes",
         "documentation": {}
     },
