@@ -3,6 +3,7 @@ from flask import request, Response, json, Blueprint
 from src import db
 from src.middlewares.protected_middleware import token_required
 from src.models.models import Carts, OrderItems, Orders, UserLocations
+from src.utils import sendEmail
 
 
 orders = Blueprint("orders", __name__)
@@ -400,7 +401,7 @@ def getOrderById(user, order_id):
         )
 
 
-@orders.route("/deliver/<int:order_id>", methods=["PUT"])
+@orders.route("/<int:order_id>/deliver", methods=["PUT"])
 @token_required
 def deliver(user, order_id):
     try:
@@ -417,7 +418,7 @@ def deliver(user, order_id):
             )
 
         # change the status to delivered and send an email to the owner
-        order = Orders.query.get(order_id)
+        order = Orders.query.filter_by(id=order_id, status="PENDING").first()
         if not order:
             return Response(
                 response=json.dumps(
@@ -432,10 +433,128 @@ def deliver(user, order_id):
 
         # set the status to delivered
         order.status = "DELIVERED"
-        db.session.commit()
-        
+        name = order.user.username
+        country = order.location.country
+        province = order.location.province
+        district = order.location.district
+        sector = order.location.sector
+        message = "DELIVERY CONFIRMATION MESSAGE"
+        body = f"Hello {name}! Your order is on the way to {country}, {province}, {district}, {sector}."
+        recipients = [order.user.email]
         # send the email
+        b = sendEmail(message=message, body=body, recipients=recipients)
+        if not b:
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "failed",
+                        "message": "Error while sending the message",
+                    }
+                ),
+                status=500,
+                mimetype="application/json",
+            )
 
+        db.session.commit()
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "success",
+                    "message": "Order delivered and message sent to the client!",
+                }
+            ),
+            status=200,
+            mimetype="application/json",
+        )
+
+    except Exception as e:
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "failed",
+                    "message": "Internal server error...",
+                    "error": str(e),
+                }
+            ),
+            status=500,
+            mimetype="application/json",
+        )
+
+
+@orders.route("/<string:status>/all")
+@token_required
+def getDeliveredOrders(user, status):
+    try:
+        if user["role"] == "CLIENT":
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "forbidden",
+                        "message": "You are not allowed to perform this action!",
+                    }
+                ),
+                status=403,
+                mimetype="application/json",
+            )
+        # get the orders
+        orders = Orders.query.filter_by(status=status.upper()).all()
+        order_list = []
+
+        for order in orders:
+            order_items = []
+            for item in order.order_items:
+                order_item_data = {
+                    "product_name": item.product_name,
+                    "quantity": item.quantity,
+                    "id": item.id,
+                    "price": item.total_price,
+                }
+                order_items.append(order_item_data)
+
+            order_object = {
+                "id": order.id,
+                "user": {
+                    "id": order.user.id,
+                    "username": order.user.username,
+                    "email": order.user.email,
+                },
+                "location": {
+                    "id": order.location.id,
+                    "country": order.location.country,
+                    "province": order.location.province,
+                    "district": order.location.district,
+                    "sector": order.location.sector,
+                },
+                "total_price": order.total_price,
+                "status": order.status,
+                "order_items": order_items,
+                "order_date": order.order_date.isoformat(),
+            }
+            order_list.append(order_object)
+
+        if len(order_list) == 0:
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "no orders",
+                        "message": f"No {status.upper()} orders found!",
+                    }
+                ),
+                status=200,
+                mimetype="application/json",
+            )
+
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "success",
+                    "message": "Orders fetched successfully...",
+                    "orders": order_list,
+                }
+            ),
+            status=200,
+            mimetype="application/json",
+        )
     except Exception as e:
         return Response(
             response=json.dumps(

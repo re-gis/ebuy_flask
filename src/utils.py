@@ -1,8 +1,10 @@
 # uploading to cloudinary
 from cloudinary.uploader import upload
 import cloudinary
-from flask import jsonify
+from flask import jsonify, Response, json
 import os
+from flask_mail import Message
+from src import mail
 
 cloudinary.config(
     cloud_name=os.getenv("cloud_name"),
@@ -24,3 +26,18 @@ def upload_image(file) -> str:
         return upload_result["url"]
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+def sendEmail(message, body, recipients):
+    try:
+        msg = Message(
+            message,
+            sender=os.getenv("MAIL_USERNAME"),
+            recipients=recipients,
+        )  # Recipient's email address
+        msg.body = body
+        mail.send(msg)
+        return True
+    except Exception as e:
+        print(e)
+        return False

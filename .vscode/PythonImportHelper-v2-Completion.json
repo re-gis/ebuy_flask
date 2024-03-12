@@ -290,6 +290,22 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "token_required",
         "importPath": "src.middlewares.protected_middleware",
         "description": "src.middlewares.protected_middleware",
@@ -467,6 +483,14 @@
         "documentation": {}
     },
     {
+        "label": "mail",
+        "importPath": "src",
+        "description": "src",
+        "isExtraImport": true,
+        "detail": "src",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "importPath": "src",
         "description": "src",
@@ -512,6 +536,14 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "sendEmail",
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "isExtraImport": true,
+        "detail": "src.utils",
         "documentation": {}
     },
     {
@@ -643,6 +675,14 @@
         "importPath": "cloudinary",
         "description": "cloudinary",
         "detail": "cloudinary",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "flask_mail",
+        "description": "flask_mail",
+        "isExtraImport": true,
+        "detail": "flask_mail",
         "documentation": {}
     },
     {
@@ -1384,6 +1424,15 @@
         "documentation": {}
     },
     {
+        "label": "getDeliveredOrders",
+        "kind": 2,
+        "importPath": "src.controllers.order_controller",
+        "description": "src.controllers.order_controller",
+        "peekOfCode": "def getDeliveredOrders(user, status):\n    try:\n        if user[\"role\"] == \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
+        "detail": "src.controllers.order_controller",
+        "documentation": {}
+    },
+    {
         "label": "orders",
         "kind": 5,
         "importPath": "src.controllers.order_controller",
@@ -1605,6 +1654,15 @@
         "importPath": "src.utils",
         "description": "src.utils",
         "peekOfCode": "def upload_image(file) -> str:\n    if not file:\n        return jsonify({\"error\": \"No file part\"}), 400\n    if file.filename == \"\":\n        return jsonify({\"error\": \"No selected file\"}), 400\n    # Upload the image to Cloudinary\n    try:\n        upload_result = upload(file)\n        return upload_result[\"url\"]\n    except Exception as e:",
+        "detail": "src.utils",
+        "documentation": {}
+    },
+    {
+        "label": "sendEmail",
+        "kind": 2,
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "peekOfCode": "def sendEmail(message, body, recipients):\n    try:\n        msg = Message(\n            message,\n            sender=os.getenv(\"MAIL_USERNAME\"),\n            recipients=recipients,\n        )  # Recipient's email address\n        msg.body = body\n        mail.send(msg)\n        return True",
         "detail": "src.utils",
         "documentation": {}
     }
