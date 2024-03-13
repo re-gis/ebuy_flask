@@ -1397,11 +1397,11 @@
         "documentation": {}
     },
     {
-        "label": "getMyOrders",
+        "label": "getMyAllOrders",
         "kind": 2,
         "importPath": "src.controllers.order_controller",
         "description": "src.controllers.order_controller",
-        "peekOfCode": "def getMyOrders(user):\n    try:\n        if user[\"role\"] != \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
+        "peekOfCode": "def getMyAllOrders(user):\n    try:\n        if user[\"role\"] != \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
         "detail": "src.controllers.order_controller",
         "documentation": {}
     },
@@ -1424,11 +1424,20 @@
         "documentation": {}
     },
     {
-        "label": "getDeliveredOrders",
+        "label": "getDeliveredOrPendingOrders",
         "kind": 2,
         "importPath": "src.controllers.order_controller",
         "description": "src.controllers.order_controller",
-        "peekOfCode": "def getDeliveredOrders(user, status):\n    try:\n        if user[\"role\"] == \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
+        "peekOfCode": "def getDeliveredOrPendingOrders(user, status):\n    try:\n        if user[\"role\"] == \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
+        "detail": "src.controllers.order_controller",
+        "documentation": {}
+    },
+    {
+        "label": "getMyOrders",
+        "kind": 2,
+        "importPath": "src.controllers.order_controller",
+        "description": "src.controllers.order_controller",
+        "peekOfCode": "def getMyOrders(user, status):\n    try:\n        if user[\"role\"] != \"CLIENT\":\n            return Response(\n                response=json.dumps(\n                    {\n                        \"status\": \"forbidden\",\n                        \"message\": \"You are not allowed to perform this action!\",\n                    }\n                ),",
         "detail": "src.controllers.order_controller",
         "documentation": {}
     },

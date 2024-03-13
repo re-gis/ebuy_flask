@@ -238,7 +238,7 @@ def getOrders(user):
 
 @orders.route("/mine", methods=["GET"])
 @token_required
-def getMyOrders(user):
+def getMyAllOrders(user):
     try:
         if user["role"] != "CLIENT":
             return Response(
@@ -483,7 +483,7 @@ def deliver(user, order_id):
 
 @orders.route("/<string:status>/all")
 @token_required
-def getDeliveredOrders(user, status):
+def getDeliveredOrPendingOrders(user, status):
     try:
         if user["role"] == "CLIENT":
             return Response(
@@ -498,6 +498,96 @@ def getDeliveredOrders(user, status):
             )
         # get the orders
         orders = Orders.query.filter_by(status=status.upper()).all()
+        order_list = []
+
+        for order in orders:
+            order_items = []
+            for item in order.order_items:
+                order_item_data = {
+                    "product_name": item.product_name,
+                    "quantity": item.quantity,
+                    "id": item.id,
+                    "price": item.total_price,
+                }
+                order_items.append(order_item_data)
+
+            order_object = {
+                "id": order.id,
+                "user": {
+                    "id": order.user.id,
+                    "username": order.user.username,
+                    "email": order.user.email,
+                },
+                "location": {
+                    "id": order.location.id,
+                    "country": order.location.country,
+                    "province": order.location.province,
+                    "district": order.location.district,
+                    "sector": order.location.sector,
+                },
+                "total_price": order.total_price,
+                "status": order.status,
+                "order_items": order_items,
+                "order_date": order.order_date.isoformat(),
+            }
+            order_list.append(order_object)
+
+        if len(order_list) == 0:
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "no orders",
+                        "message": f"No {status.upper()} orders found!",
+                    }
+                ),
+                status=200,
+                mimetype="application/json",
+            )
+
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "success",
+                    "message": "Orders fetched successfully...",
+                    "orders": order_list,
+                }
+            ),
+            status=200,
+            mimetype="application/json",
+        )
+    except Exception as e:
+        return Response(
+            response=json.dumps(
+                {
+                    "status": "failed",
+                    "message": "Internal server error...",
+                    "error": str(e),
+                }
+            ),
+            status=500,
+            mimetype="application/json",
+        )
+
+
+@orders.route("/<string:status>/mine", methods=["GET"])
+@token_required
+def getMyOrders(user, status):
+    try:
+        if user["role"] != "CLIENT":
+            return Response(
+                response=json.dumps(
+                    {
+                        "status": "forbidden",
+                        "message": "You are not allowed to perform this action!",
+                    }
+                ),
+                status=403,
+                mimetype="application/json",
+            )
+        # get the orders
+        orders = Orders.query.filter_by(
+            status=status.upper(), user_id=user["user_id"]
+        ).all()
         order_list = []
 
         for order in orders:
